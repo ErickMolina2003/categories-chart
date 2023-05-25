@@ -1,0 +1,172 @@
+{
+    "categories": [
+        {
+            "title": "Food",
+            "products": [
+                {
+                    "title": "Cereal",
+                    "brand": [
+                        {
+                            "title": "cereal1",
+                            "sales": [100, 500, 400, 250]
+                        },
+                        {
+                            "title": "cereal2",
+                            "sales": [500, 100, 300, 240]
+                        },
+                        {
+                            "title": "cereal3",
+                            "sales": [600, 100, 300, 750]
+                        }
+                    ]
+                },
+                {
+                    "title": "Meat",
+                    "brand": [
+                        {
+                            "title": "meat1",
+                            "sales": [100, 500, 400, 250]
+                        },
+                        {
+                            "title": "meat2",
+                            "sales": [750, 123, 321, 381]
+                        },
+                        {
+                            "title": "meat3",
+                            "sales": [150, 91, 231, 213]
+                        }
+                    ]
+                },
+                {
+                    "title": "Drinks",
+                    "brand": [
+                        {
+                            "title": "drink1",
+                            "sales": [100, 500, 400, 250]
+                        },
+                        {
+                            "title": "drink2",
+                            "sales": [500, 100, 300, 240]
+                        },
+                        {
+                            "title": "drink3",
+                            "sales": [600, 100, 300, 750]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Cars",
+            "products": [
+                {
+                    "title": "Tourism",
+                    "brand": [
+                        {
+                            "title": "tourism1",
+                            "sales": [100, 300, 410, 350]
+                        },
+                        {
+                            "title": "tourism2",
+                            "sales": [530, 190, 350, 140]
+                        },
+                        {
+                            "title": "tourism3",
+                            "sales": [130, 150, 500, 250]
+                        }
+                    ]
+                },
+                {
+                    "title": "Truck",
+                    "brand": [
+                        {
+                            "title": "truck1",
+                            "sales": [130, 150, 500, 250]
+                        },
+                        {
+                            "title": "truck2",
+                            "sales": [500, 100, 300, 240]
+                        },
+                        {
+                            "title": "truck3",
+                            "sales": [100, 500, 400, 250]
+                        }
+                    ]
+                },
+                {
+                    "title": "Van",
+                    "brand": [
+                        {
+                            "title": "van1",
+                            "sales": [130, 150, 500, 250]
+                        },
+                        {
+                            "title": "van2",
+                            "sales": [500, 100, 300, 240]
+                        },
+                        {
+                            "title": "van3",
+                            "sales": [100, 500, 400, 250]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "games",
+            "products": [
+                {
+                    "title": "Shooter",
+                    "brand": [
+                        {
+                            "title": "shooter1",
+                            "sales": [100, 250, 300, 550]
+                        },
+                        {
+                            "title": "shooter2",
+                            "sales": [300, 900, 300, 210]
+                        },
+                        {
+                            "title": "shooter3",
+                            "sales": [100, 500, 400, 250]
+                        }
+                    ]
+                },
+                {
+                    "title": "Adventure",
+                    "brand": [
+                        {
+                            "title": "adventure1",
+                            "sales": [130, 150, 500, 250]
+                        },
+                        {
+                            "title": "adventure2",
+                            "sales": [500, 100, 300, 240]
+                        },
+                        {
+                            "title": "adventure3",
+                            "sales": [100, 500, 400, 250]
+                        }
+                    ]
+                },
+                {
+                    "title": "MMO",
+                    "brand": [
+                        {
+                            "title": "mmo1",
+                            "sales": [130, 150, 500, 250]
+                        },
+                        {
+                            "title": "mmo2",
+                            "sales": [500, 100, 300, 240]
+                        },
+                        {
+                            "title": "mmo3",
+                            "sales": [100, 500, 400, 250]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

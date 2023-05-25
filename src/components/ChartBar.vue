@@ -51,8 +51,6 @@ import {
 } from 'chart.js';
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import CATEGORIES_JSON from '../mocks/result';
-import { AnyObject } from 'chart.js/dist/types/basic';
 
 ChartJS.register(
   Title,
@@ -68,7 +66,9 @@ ChartJS.register(
   name: 'CreateSuper',
 })
 class ChartBar extends Vue {
-  categories = [];
+  CATEGORIES_JSON = require('../mocks/result.json');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  categories: any[] = [];
   products = [];
   branding = [];
 
@@ -81,7 +81,7 @@ class ChartBar extends Vue {
   };
 
   mounted() {
-    CATEGORIES_JSON.categories.forEach((category: AnyObject) => {
+    this.CATEGORIES_JSON.categories.forEach((category: { title: string }) => {
       this.categories.push(category.title);
     });
   }
@@ -89,21 +89,23 @@ class ChartBar extends Vue {
   getProducts() {
     this.products = [];
     this.branding = [];
-    CATEGORIES_JSON.categories.forEach((category) => {
-      if (category.title == this.categorySelected) {
-        this.products = category.products;
+    this.CATEGORIES_JSON.categories.forEach(
+      (category: { title: string; products: [] }) => {
+        if (category.title == this.categorySelected) {
+          this.products = category.products;
+        }
       }
-    });
-    console.log('productos: ', this.products);
+    );
     return this.products;
   }
 
   get computedProductTitle() {
     this.getProducts();
 
-    let productsTitle = [];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let productsTitle: any = [];
 
-    this.products.forEach((product) => {
+    this.products.forEach((product: { title: string }) => {
       productsTitle.push(product.title);
     });
 
@@ -111,7 +113,7 @@ class ChartBar extends Vue {
   }
 
   getBrandings() {
-    this.products.forEach((product) => {
+    this.products.forEach((product: { title: string; brand: [] }) => {
       if (product.title == this.productSelected) {
         this.branding = product.brand;
       }
@@ -121,9 +123,10 @@ class ChartBar extends Vue {
   get computedBrandingTitle() {
     this.getBrandings();
 
-    let brandingsTitle = [];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let brandingsTitle: any = [];
 
-    this.branding.forEach((branding) => {
+    this.branding.forEach((branding: { title: string }) => {
       brandingsTitle.push(branding.title);
     });
 
@@ -138,7 +141,7 @@ class ChartBar extends Vue {
       ],
     };
 
-    this.branding.forEach((branding) => {
+    this.branding.forEach((branding: { title: string; sales: [] }) => {
       if (branding.title == this.brandingSelected) {
         chartData.datasets = [
           { label: 'Sales', backgroundColor: '#f87979', data: branding.sales },
